@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Lista de Productos</h1>
+    <ol>
+    
+        <li>Producto : Sueter tipo Polo</li>
+        <li>Producto : Jeans Camuflado</li>
+        <li>Producto : Zapatos trile A</li>
+        <li>Producto : Accesorios </li>
+        <li>Producto : Chanclas </li>
+    
+    </ol>
+    
+    <script>
+        
+        function elegirProducto() {
+            var productoElegido;
+            var seleccionValida = false;
+
+            while (!seleccionValida) {
+             
+                var seleccion = prompt("Por favor, ingrese el número del producto que desea comprar (1-5):");
+
+                
+                var numeroProducto = parseInt(seleccion);
+
+                
+                if (!isNaN(numeroProducto) && numeroProducto >= 1 && numeroProducto <= 5) {
+                    
+                    switch (numeroProducto) {
+                        case 1:
+                            productoElegido = "Sueter tipo Polo";
+                            break;
+                        case 2:
+                            productoElegido = "Jeans Camuflado";
+                            break;
+                        case 3:
+                            productoElegido = "Zapatos triple A";
+                            break;
+                        case 4:
+                            productoElegido = "Accesorios";
+                            break;
+                        case 5:
+                            productoElegido = "Chanclas";
+                            break;
+                    }
+                    seleccionValida = true;
+                } else {
+                    alert("Selección no válida. Por favor, ingrese un número válido del 1 al 5.");
+                }
+            }
+
+            
+            alert("Usted decidio comprar: " + productoElegido);
+
+        }
+
+        
+        elegirProducto();
+    </script>
+</body>
+</html>
